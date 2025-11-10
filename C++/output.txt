@@ -1,1 +1,16 @@
-Enter day number (1-7): Tuesday
+Hello! This is a non-parameterized void function.
+Square of 5 is: 25
+Addition result: 30
+giveMeNumber returned: 100
+
+Before passByValue: a = 10
+Inside passByValue function: x = 20
+After passByValue: a = 10 (unchanged)
+
+Before passByReference: b = 10
+Inside passByReference function: x = 20
+After passByReference: b = 20 (changed)
+
+Before printArray: arr[0] = 1
+Array elements: 1 2 3 
+After printArray: arr[0] = 999 (changed due to pass-by-reference behavior)
