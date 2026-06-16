@@ -4,11 +4,7 @@
         {
             "label": "Compile and Run (input/output files)",
             "type": "shell",
-            "command": "cmd.exe",
-            "args": [
-                "/c",
-                "g++ -std=c++17 -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" \"${file}\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\""
-            ],
+            "command": "g++ -std=c++17 -o \"${fileBasenameNoExtension}.exe\" \"${fileBasename}\"; if ($LASTEXITCODE -eq 0) { Get-Content \"input.txt\" | & \".\\${fileBasenameNoExtension}.exe\" | Set-Content \"output.txt\" }",
             "options": {
                 "cwd": "${fileDirname}"
             },
